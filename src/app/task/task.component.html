@@ -1,0 +1,47 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Задача [выполнена]</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form>
+      <mat-form-field appearance="outline">
+        <mat-label>Название</mat-label>
+        <input matInput placeholder="Название задачи">
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Приоритет</mat-label>
+        <mat-select placeholder="Выберите приоритет">
+          <mat-option value="high">Высокий</mat-option>
+          <mat-option value="medium">Средний</mat-option>
+          <mat-option value="low">Низкий</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Статус</mat-label>
+        <mat-select placeholder="Выберите статус">
+          <mat-option value="notStarted">Не начато</mat-option>
+          <mat-option value="inProgress">В процессе</mat-option>
+          <mat-option value="completed">Завершено</mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Исполнитель</mat-label>
+        <input matInput placeholder="Имя исполнителя">
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button>Отметить задачу невыполненной</button>
+  </mat-card-actions>
+</mat-card>
+
